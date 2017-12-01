@@ -99,7 +99,7 @@ class HotPotatoPlayer {
 	*/
   startGame() {
     const gameDelay = 3000; // 3-seconds in milliseconds
-    const gameLength = 5; // seconds
+    const gameLength = 60; // seconds
     let elapsedSeconds = 0;
     this.isStarter = true;
 
@@ -149,7 +149,7 @@ class HotPotatoPlayer {
 	* @return {undefined}
 	*/
   passHotPotato(hotPotatoMessage) {
-    let randomWait = this.getRandomWait(1000, 2000);
+    let randomWait = 1
     let timerID = setTimeout(() => {
       hydra.getServicePresence('hpp-service').then((instances) => {
         let sent = false;
